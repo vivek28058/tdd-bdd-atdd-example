@@ -1,8 +1,9 @@
-h2. Stories:
+## Stories:
+
 	1.	As a user, I'd like a simple API so that I can do addition.
 	2.	As a user, I'd like a simple API so that I can do subtraction.
 
-h2. Steps (from scratch): 
+## Steps (from scratch): 
 
 **Setup**
 
