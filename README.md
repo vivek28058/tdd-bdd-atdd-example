@@ -62,9 +62,10 @@
 }
 ```
     3. Add `lint` script to package.json
-    ```
-    "lint": "standard *.js --fix"
-    ```
+
+```
+"lint": "standard *.js --fix"
+```
     4. Run `npm run lint`, and fix any issues
 
 **Behavioral Testing**
