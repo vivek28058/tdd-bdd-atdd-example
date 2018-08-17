@@ -1,16 +1,19 @@
 ## Stories:
 
-	1.	As a user, I'd like a simple API so that I can do addition.
-	2.	As a user, I'd like a simple API so that I can do subtraction.
+	1. As a user, I'd like a simple API so that I can do addition.
+	2. As a user, I'd like a simple API so that I can do subtraction.
+	3. As a user, I'd like a simple API so that I can do multiplication.
+	4. As a user, I'd like a simple API so that I can do division.
+
 
 ## Steps (from scratch): 
 
 **Setup**
 
-	1.	Create project directory: `mkdir calc && cd calc`
-	2.	Create package.json: `npm init`
-	3.	Install Babel: `npm i babel-cli babel-presets-env --save-dev`
-	4.	Configure Babel in package.json:
+	1. Create project directory: `mkdir calc && cd calc`
+	2. Create package.json: `npm init`
+	3. Install Babel: `npm i babel-cli babel-presets-env --save-dev`
+	4. Configure Babel in package.json:
    
 ```
 "babel": {"presets": [["env",{"shippedProposals": true}]]}
@@ -32,7 +35,7 @@
     5. Run `npm run test:unit`. tests should fail
     6. Write and export add function in calc.js
     7. Run `npm run test:unit`. tests should pass.
-    8. Repeat 4-7 for subtract function
+    8. Repeat 4-7 for subtract, mulitply, and divide functions
 
 **Unit Test Coverage**
 
