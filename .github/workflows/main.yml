@@ -34,5 +34,5 @@ jobs:
       run: npm run test:bdd
       
     - name: report
-      run: cat /home/runner/work/tdd-bdd-atdd-example/tdd-bdd-atdd-example/mochawesome-report/mochawesome.trx
+      run: cat/home/runner/work/tdd-bdd-atdd-example/tdd-bdd-atdd-example/mochawesome-report/mochawesome.json
 
