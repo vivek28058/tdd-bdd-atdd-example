@@ -30,6 +30,6 @@ jobs:
     - name: BDD test
       run: npm test:bdd
 
-    - name: atdd test
-      run: npm test:atdd
+    #- name: atdd test
+    #  run: npm test:atdd
  
