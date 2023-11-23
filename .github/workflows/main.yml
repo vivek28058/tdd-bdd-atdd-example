@@ -31,7 +31,7 @@ jobs:
       run: npm run test:bdd
 
     #- name: atdd test
-    #  run: npm run test:atde
+    #  run: npm run test:atdd
 
     - name: Publish Test Results
       uses: publish-unit-test-result-action@v2
