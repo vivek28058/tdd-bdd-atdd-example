@@ -25,10 +25,16 @@ jobs:
       run: npm install -g mochawesome mochawesome-report-generator
  
     - name: unit test
-      run: npm run test:unit
+      run: npm run test:unit --logger "trx:LogFilename=xtest.trx"
 
     - name: BDD test
       run: npm run test:bdd
 
     #- name: atdd test
     #  run: npm run test:atdd
+    
+    - name: Publish Test Results
+      uses: EnricoMi/publish-unit-test-result-action@v2
+      if: always()
+      with:
+        trx.files: "*/test-results/**/xtest.trx"
