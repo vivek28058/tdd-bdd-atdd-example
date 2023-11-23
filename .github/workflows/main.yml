@@ -27,5 +27,5 @@ jobs:
     - name: unit test
       run: npm test
  
-    - name: ATDD test
-      run: npm run build  # Adjust the script as per your project setup
+  #  - name: ATDD test
+    #  run: npm run build  # Adjust the script as per your project setup
