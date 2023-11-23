@@ -21,11 +21,14 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: Install packages
+      run: npm ci
+
     - name: Install mocha
       run: npm install -g mochawesome mochawesome-report-generator
  
     - name: unit test
-      run: npm run test:unit --logger "trx:LogFilename=xtest.trx"
+      run: npm run test:unit --logger "trx;LogFilename=test-results.trx" || true
 
     - name: BDD test
       run: npm run test:bdd
@@ -33,11 +36,12 @@ jobs:
     #- name: atdd test
     #  run: npm run test:atdd
     
-    - name: Publish Test Results
-      uses: EnricoMi/publish-unit-test-result-action@v2
+    - name: Test Report
+      uses: dorny/test-reporter@v1
       if: always()
       with:
-        files: |
-          test-results/**/*.xml
-          test-results/**/xtest.trx
-          test-results/**/*.json
+        name: Tests
+        path: "**/test-results.trx"                            
+        reporter: dotnet-trx
+        fail-on-error: true
+    
