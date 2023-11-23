@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node index.js",
-    "test:unit": "nyc mocha *.test.js --require babel-register --reporter mochawesome",
+    "test:unit": "nyc mocha *.test.js --require babel-register",
     "test:bdd": "cucumber-js --require-module babel-register",
-    "test:atdd": "mocha acceptance/*.atdd.js --require babel-register --reporter mochawesome",
+    "test:atdd": "mocha acceptance/*.atdd.js --require babel-register",
     "lint": "standard *.js --fix",
     "test": "npm run test:unit && npm run test:bdd && npm run test:atdd && npm run lint",
     "test": "mocha --reporter json > test-results.json"
