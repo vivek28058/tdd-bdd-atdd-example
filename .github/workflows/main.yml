@@ -34,7 +34,7 @@ jobs:
     #  run: npm run test:atdd
 
     - name: Publish Test Results
-      uses: publish-unit-test-result-action@v2
+      uses: EnricoMi/publish-unit-test-result-action@v2
       if: always()
       with:
          files: |
