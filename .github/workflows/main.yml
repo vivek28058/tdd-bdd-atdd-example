@@ -26,13 +26,16 @@ jobs:
 
     - name: Install mocha
       run: npm install -g mochawesome mochawesome-report-generator
- 
+      
+    - name: Start npm
+      run: npm start
+      
     - name: unit test
       run: npm run test:unit
 
     - name: BDD test
       run: npm run test:bdd
 
-    #- name: atdd test
-    #  run: npm run test:atdd
+    - name: atdd test
+      run: npm run test:atdd
 
