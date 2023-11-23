@@ -21,11 +21,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Install dependencies
+    - name: Install mocha
       run: npm install -g mochawesome mochawesome-report-generator
-
-    - name: Install dependencies
-      run: npm audit fix
  
     - name: unit test
       run: npm run test:unit
