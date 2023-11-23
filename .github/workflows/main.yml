@@ -31,5 +31,5 @@ jobs:
       run: npm run test:bdd
 
     #- name: atdd test
-    #  run: npm run test:atdd
+    #  run: npm run test:atde
  
