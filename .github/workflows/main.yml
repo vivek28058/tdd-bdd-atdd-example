@@ -28,11 +28,8 @@ jobs:
       run: npm install -g mochawesome mochawesome-report-generator
       
     - name: unit test
-      run: npm run test:unit --logger "trx;LogFileName=mochawesome.trx"
+      run: npm run test:unit 
 
     - name: BDD test
       run: npm run test:bdd
-
-    - name: report
-      run: cat /home/runner/work/tdd-bdd-atdd-example/tdd-bdd-atdd-example/mochawesome-report/mochawesome.trx
 
