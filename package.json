@@ -10,6 +10,7 @@
     "test:atdd": "mocha acceptance/*.atdd.js --require babel-register --reporter mochawesome",
     "lint": "standard *.js --fix",
     "test": "npm run test:unit && npm run test:bdd && npm run test:atdd && npm run lint"
+    "test": "mocha --reporter json > test-results.json"
   },
   "author": "",
   "license": "ISC",
