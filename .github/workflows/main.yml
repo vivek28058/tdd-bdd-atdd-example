@@ -1,36 +1,43 @@
-name: Node.js CI/CD with NPM
- 
+name: Node.js CI/CD with Coverage
+
 on:
   push:
     branches:
       - master
- 
+
 jobs:
   build:
     runs-on: ubuntu-latest
- 
+
     steps:
+    # Step 1: Checkout code
     - name: Checkout code
       uses: actions/checkout@v2
- 
+
+    # Step 2: Setup Node.js
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '16'  # You can adjust the version as needed
- 
-    - name: Install dependencies
-      run: npm install
+        node-version: '16'
 
-    - name: Install packages
+    # Step 3: Install dependencies
+    - name: Install dependencies
       run: npm ci
 
-    - name: Install mocha
-      run: npm install -g mochawesome mochawesome-report-generator
-      
-    - name: unit test
-      run: npm run test:unit 
+    # Step 4: Run tests
+    - name: Run unit tests
+      run: npm run test:unit
 
-    - name: BDD test
+    - name: Run BDD tests
       run: npm run test:bdd
-      
 
+    # Step 5: Run coverage
+    - name: Run coverage tests
+      run: npm run coverage
+
+    # Step 6: Upload Coverage Reports
+    - name: Upload Coverage Report
+      uses: actions/upload-artifact@v3
+      with:
+        name: coverage-report
+        path: coverage/
